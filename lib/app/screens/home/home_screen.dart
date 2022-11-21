@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:my_wallet_app_ui/app/utils/res/colors.dart';
 import 'package:my_wallet_app_ui/app/utils/widgets/card.dart';
+import 'package:my_wallet_app_ui/app/utils/widgets/expensive.dart';
 import 'package:my_wallet_app_ui/app/utils/widgets/headers.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,7 +20,7 @@ class HomeScreen extends StatelessWidget {
             child: const WalletHeader(),
           ),
           const Expanded(child: CardSection()),
-          Expanded(child: Container()),
+          const Expanded(child: Expensives()),
         ],
       ),
     );

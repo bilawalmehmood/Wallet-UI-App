@@ -27,7 +27,7 @@ class CardSection extends StatelessWidget {
             itemBuilder: (context, index) {
               return Container(
                 margin:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: AppColors.primaryColor,
