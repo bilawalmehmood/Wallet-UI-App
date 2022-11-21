@@ -7,6 +7,7 @@ abstract class AppColors {
   static const Color deepOrangeColor = Colors.deepOrange;
   static const Color secondryColor = Color.fromRGBO(19, 28, 33, 1);
   static const Color greyColor = Colors.grey;
+  static const Color whiteColor = Colors.white12;
   static const Color blackColor = Colors.black;
 
   //List of data
