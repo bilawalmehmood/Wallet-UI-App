@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_wallet_app_ui/app/utils/res/colors.dart';
+import 'package:my_wallet_app_ui/app/utils/res/data.dart';
 import 'package:my_wallet_app_ui/app/utils/widgets/pie_chart_custom_painter.dart';
 
 class PieChart extends StatelessWidget {
@@ -19,8 +20,9 @@ class PieChart extends StatelessWidget {
       child: Stack(
         children: [
           CustomPaint(
+            foregroundPainter:
+                PieChartCustomPainter(categories: DataList.expensive),
             child: Container(),
-            foregroundPainter: PieChartCustomPainter(),
           ),
           Center(
             child: Container(
@@ -30,6 +32,11 @@ class PieChart extends StatelessWidget {
                   boxShadow: AppColors.neumorpShadow,
                   color: AppColors.primaryColor,
                   shape: BoxShape.circle),
+              child: const Center(
+                  child: Text(
+                "200\$",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              )),
             ),
           )
         ],

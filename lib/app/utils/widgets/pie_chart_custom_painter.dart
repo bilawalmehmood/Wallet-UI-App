@@ -5,8 +5,8 @@ import 'package:my_wallet_app_ui/app/utils/res/colors.dart';
 
 class PieChartCustomPainter extends CustomPainter {
   final List? categories;
-  final double? width;
-  PieChartCustomPainter({this.categories, this.width});
+
+  PieChartCustomPainter({this.categories});
   @override
   void paint(Canvas canvas, Size size) {
     Offset center = Offset(size.width / 2, size.height / 2);
@@ -15,8 +15,10 @@ class PieChartCustomPainter extends CustomPainter {
     double startRadian = -pi / 2;
     var paint = Paint()
       ..style = PaintingStyle.stroke
-      ..strokeWidth = width! / 1.8;
-    categories!.forEach((f) => total += f['amount']);
+      ..strokeWidth = 40;
+    for (var f in categories!) {
+      total += f['amount'];
+    }
     for (var i = 0; i < categories!.length; i++) {
       final currentCategory = categories![i];
       final sweepRadian = (currentCategory['amount'] / total) * 2 * pi;
